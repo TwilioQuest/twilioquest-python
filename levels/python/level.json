@@ -1,0 +1,13 @@
+{
+  "title": "Mysteries of the Pythonic Temple",
+  "description": "Follow in the footsteps of legendary explorer Toledo Van Possum as you uncover the mysteries of the Pythonic Temple, the last surviving structure of the ancient City of Python. Learn how to use the Python programming language, and other related tools, to complete your quest.",
+  "priority": 2,
+  "navMap": {
+    "x": 45,
+    "y": 85,
+    "sprite": "nav_map/pythonic_temple.png"
+  },
+  "is_mission": false,
+  "backgroundMusic": "unsettlingarea_59895b",
+  "flavorTextOverrides": {}
+}
