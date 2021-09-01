@@ -1285,22 +1285,52 @@
                  "y":241
                 }, 
                 {
-                 "gid":10032,
+                 "gid":10033,
                  "height":32,
-                 "id":244,
+                 "id":245,
                  "name":"",
-                 "properties":[
-                        {
-                         "name":"observation",
-                         "type":"string",
-                         "value":"This is the legendary explorer, Toledo Van Possum!"
-                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":472,
+                 "x":470,
                  "y":241
+                }, 
+                {
+                 "gid":10034,
+                 "height":32,
+                 "id":247,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":457,
+                 "y":300
+                }, 
+                {
+                 "gid":10035,
+                 "height":32,
+                 "id":248,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":500,
+                 "y":345
+                }, 
+                {
+                 "gid":10036,
+                 "height":32,
+                 "id":249,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":547,
+                 "y":289
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1376,7 +1406,7 @@
          "y":0
         }],
  "nextlayerid":47,
- "nextobjectid":245,
+ "nextobjectid":250,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.6.0",

@@ -15,7 +15,3 @@ module.exports = {
     },
   },
 };
-
-// TODO:
-// create van possom object
-// create ghost people objects
