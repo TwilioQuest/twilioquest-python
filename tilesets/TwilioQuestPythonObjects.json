@@ -8,7 +8,7 @@
  "margin":0,
  "name":"TwilioQuestPythonObjects",
  "spacing":0,
- "tilecount":3,
+ "tilecount":4,
  "tiledversion":"1.6.0",
  "tileheight":48,
  "tiles":[
@@ -111,6 +111,52 @@
              "y":0
             },
          "type":"rock"
+        }, 
+        {
+         "id":3,
+         "image":"..\/objects\/van-possum\/icon.png",
+         "imageheight":32,
+         "imagewidth":32,
+         "objectgroup":
+            {
+             "draworder":"index",
+             "id":2,
+             "name":"",
+             "objects":[
+                    {
+                     "height":14,
+                     "id":1,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":15,
+                     "x":8,
+                     "y":18
+                    }],
+             "opacity":1,
+             "type":"objectgroup",
+             "visible":true,
+             "x":0,
+             "y":0
+            },
+         "properties":[
+                {
+                 "name":"conversation",
+                 "type":"string",
+                 "value":"vanPossumDefault"
+                }, 
+                {
+                 "name":"conversationAvatar",
+                 "type":"string",
+                 "value":"vanPossum.png"
+                }, 
+                {
+                 "name":"interactable",
+                 "type":"bool",
+                 "value":true
+                }],
+         "type":"van-possum"
         }],
  "tilewidth":48,
  "type":"tileset",
