@@ -1,0 +1,15 @@
+{
+  "title": "Python Initiation: Dictionaries",
+  "description": "Learn to use <span class=\"highlight\">dictionaries</span> to represent more complex data in Python.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Create a program as described in the tutorial on the left, then click <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

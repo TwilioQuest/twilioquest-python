@@ -1,0 +1,15 @@
+{
+  "title": "Python Initiation: Script Arguments",
+  "description": "Learn to use <strong>command line arguments</strong> to give your Python code some initial data to work with.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Create a program that uses command line arguments as described in the tutorial on the left, then click <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

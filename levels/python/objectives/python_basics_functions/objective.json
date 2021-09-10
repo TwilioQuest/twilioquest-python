@@ -1,0 +1,15 @@
+{
+  "title": "Python Initiation: Functions",
+  "description": "Create reusable chunks of Python code with <span class=\"highlight\">functions</span>.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Create a program as described in the tutorial on the left, then click <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

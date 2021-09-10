@@ -1,0 +1,17 @@
+{
+  "title": "Python Initiation: Staff of Pythonic Knowledge",
+  "description": "Unravel the mysteries of the Initiation Ritual Chamber and claim the legendary <span class=\"highlight\">Staff of Pythonic Knowledge</span>!",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "puzzleAnswer",
+      "type": "text",
+      "placeholder": "???",
+      "label": "Enter your answer for the puzzle described on the left."
+    }
+  ],
+  "rewards": {
+    "xp": 1000,
+    "items": ["python_staff"]
+  }
+}

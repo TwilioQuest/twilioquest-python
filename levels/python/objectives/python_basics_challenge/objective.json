@@ -1,0 +1,17 @@
+{
+  "title": "Python Initiation: Create a Python class",
+  "description": "As an extra challenge, create your first <span class=\"highlight\">Python class</span>!",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Create a class as instructed in the tutorial, then click <em>HACK</em>."
+    }
+  ],
+  "rewards": {
+    "xp": 400,
+    "items": ["python_scimitar"]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Python Initiation: Using the REPL",
+  "description": "Use the Python <span class=\"highlight\">REPL</span> utility to experiment with Python code.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "cityName",
+      "type": "text",
+      "placeholder": "Spooterville",
+      "label": "What is the only city mentioned by name when you type <span  class='highlight'>copyright()</span> into the REPL?"
+    },
+    {
+      "name": "resultNumber",
+      "type": "text",
+      "placeholder": "???",
+      "label": "Type <span  class='highlight'>24 / 3</span> into the REPL - what do you get in response?"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}
