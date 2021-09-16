@@ -1,8 +1,11 @@
-const path = require('path');
-const jetpack = require('fs-jetpack');
-const { NiceError, executeScript } = require('../../validation');
+const path = require("path");
+const jetpack = require("fs-jetpack");
+const {
+  NiceError,
+  executeScript,
+} = require("../../../../scripts/objectiveValidation");
 
-module.exports = async helper => {
+module.exports = async (helper) => {
   try {
     const { programPath } = helper.validationFields;
 
@@ -20,23 +23,21 @@ module.exports = async helper => {
       `);
     }
 
-    const stdout = await executeScript(
-      helper.env.TQ_PYTHON_EXE,
-      programPath
-    );
+    const stdout = await executeScript(helper.env.TQ_PYTHON_EXE, programPath);
     console.log(stdout);
 
-    helper.success(`
+    helper.success(
+      `
       Great work! You have completed the Trial of Salutation. Write the code
       for future challenges in the same folder as this file.
       <br/><br/>
       <span class="highlight"><em>For the glory of Python!</em></span>
-    `, [
-      { name: 'PYTHON_CODE_PATH', value: path.dirname(programPath) }
-    ]);
+    `,
+      [{ name: "PYTHON_CODE_PATH", value: path.dirname(programPath) }]
+    );
   } catch (e) {
     console.log(e);
-    if (e.name === 'NiceError') {
+    if (e.name === "NiceError") {
       helper.fail(e.message);
     } else {
       helper.fail(`

@@ -8,7 +8,7 @@
  "margin":0,
  "name":"TwilioQuestPythonObjects",
  "spacing":0,
- "tilecount":6,
+ "tilecount":7,
  "tiledversion":"1.6.0",
  "tileheight":48,
  "tiles":[
@@ -265,6 +265,19 @@
                  "value":true
                 }],
          "type":"ghost4"
+        }, 
+        {
+         "id":8,
+         "image":"..\/objects\/blocker\/icon.png",
+         "imageheight":24,
+         "imagewidth":24,
+         "properties":[
+                {
+                 "name":"objectiveName",
+                 "type":"string",
+                 "value":"example_objective"
+                }],
+         "type":"blocker"
         }],
  "tilewidth":48,
  "type":"tileset",

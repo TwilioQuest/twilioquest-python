@@ -1,4 +1,4 @@
-const { NiceError } = require('../../validation');
+const { NiceError } = require("../../../../scripts/objectiveValidation");
 
 /*
 The final puzzle board is:
@@ -11,9 +11,9 @@ sonar
 pansy
 yarns
 */
-const ANSWERS = ['sonar', 'pansy', 'yarns'];
+const ANSWERS = ["sonar", "pansy", "yarns"];
 
-module.exports = async helper => {
+module.exports = async (helper) => {
   try {
     const { puzzleAnswer } = helper.validationFields;
     const { pythonWorldState } = helper.context.levelState;
@@ -51,7 +51,7 @@ module.exports = async helper => {
     `);
   } catch (e) {
     console.log(e);
-    if (e.name === 'NiceError') {
+    if (e.name === "NiceError") {
       helper.fail(e.message);
     } else {
       helper.fail(`

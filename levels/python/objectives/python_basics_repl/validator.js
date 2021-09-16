@@ -1,6 +1,6 @@
-const { NiceError } = require('../../validation');
+const { NiceError } = require("../../../../scripts/objectiveValidation");
 
-module.exports = async helper => {
+module.exports = async (helper) => {
   try {
     const { cityName, resultNumber } = helper.validationFields;
 
@@ -10,7 +10,7 @@ module.exports = async helper => {
       `);
     }
 
-    if (cityName.toLowerCase().indexOf('amsterdam') < 0) {
+    if (cityName.toLowerCase().indexOf("amsterdam") < 0) {
       throw new NiceError(`
         Hmm, that isn't the city we're looking for. While in the REPL interface,
         type <span class="highlight">copyright()</span>. One of the copyright 
@@ -18,7 +18,7 @@ module.exports = async helper => {
       `);
     }
 
-    const rn = resultNumber.trim()
+    const rn = resultNumber.trim();
     const tn = Number(rn);
     if (!tn || tn !== 8) {
       throw new NiceError(`
@@ -41,7 +41,7 @@ module.exports = async helper => {
     `);
   } catch (e) {
     console.log(e);
-    if (e.name === 'NiceError') {
+    if (e.name === "NiceError") {
       helper.fail(e.message);
     } else {
       helper.fail(`

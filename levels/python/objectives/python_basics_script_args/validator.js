@@ -1,16 +1,16 @@
-const path = require('path');
-const { 
-  NiceError, 
-  executeScript, 
-  checkSetup
-} = require('../../validation');
+const path = require("path");
+const {
+  NiceError,
+  executeScript,
+  checkSetup,
+} = require("../../../../scripts/objectiveValidation");
 
-module.exports = async helper => {
+module.exports = async (helper) => {
   try {
     const py = helper.env.TQ_PYTHON_EXE;
     const programPath = path.join(
       helper.env.TQ_PYTHON_CODE_PATH,
-      'collect_input.py'
+      "collect_input.py"
     );
 
     // Ensure prerequisite stuff is set up
@@ -18,16 +18,18 @@ module.exports = async helper => {
 
     // Execute the player's script and capture the output
     const stdout = await executeScript(py, programPath, [
-      'salad',
-      'christmas',
-      'cherry soda'
+      "salad",
+      "christmas",
+      "cherry soda",
     ]);
     console.log(stdout);
 
     // Check for inputs in stdout
-    if (stdout.indexOf('salad') < 0
-        || stdout.indexOf('christmas') < 0
-        || stdout.indexOf('cherry soda') < 0) {
+    if (
+      stdout.indexOf("salad") < 0 ||
+      stdout.indexOf("christmas") < 0 ||
+      stdout.indexOf("cherry soda") < 0
+    ) {
       throw new NiceError(`
         When we executed your script, we passed in three arguments. However,
         we did not see those arguments printed in the output from your script.
@@ -46,7 +48,7 @@ module.exports = async helper => {
     `);
   } catch (e) {
     console.log(e);
-    if (e.name === 'NiceError') {
+    if (e.name === "NiceError") {
       helper.fail(e.message);
     } else {
       helper.fail(`

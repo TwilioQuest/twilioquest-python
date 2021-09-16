@@ -1,27 +1,27 @@
-const path = require('path');
-const jetpack = require('fs-jetpack');
-const { 
-  NiceError, 
-  executeScript, 
-  checkSetup
-} = require('../../validation');
+const path = require("path");
+const jetpack = require("fs-jetpack");
+const {
+  NiceError,
+  executeScript,
+  checkSetup,
+} = require("../../../../scripts/objectiveValidation");
 
-module.exports = async helper => {
+module.exports = async (helper) => {
   try {
     const py = helper.env.TQ_PYTHON_EXE;
     const programPath = path.join(
       helper.env.TQ_PYTHON_CODE_PATH,
-      'branching.py'
+      "branching.py"
     );
 
     // Ensure prerequisite stuff is set up
     await checkSetup(py, programPath);
 
-    let stdout = '';
+    let stdout = "";
 
     // Test for zero
-    stdout = await executeScript(py, programPath, ['-1', '1']);
-    if (stdout.indexOf('destitution') < 0) {
+    stdout = await executeScript(py, programPath, ["-1", "1"]);
+    if (stdout.indexOf("destitution") < 0) {
       throw new NiceError(`
         When the sum of the input numbers is zero or less, you should print the
         message: <em>You have chosen the path of destitution.</em>
@@ -29,8 +29,8 @@ module.exports = async helper => {
     }
 
     // Test negative
-    stdout = await executeScript(py, programPath, ['-10', '1']);
-    if (stdout.indexOf('destitution') < 0) {
+    stdout = await executeScript(py, programPath, ["-10", "1"]);
+    if (stdout.indexOf("destitution") < 0) {
       throw new NiceError(`
         When the sum of the input numbers is zero or less, you should print the
         message: <em>You have chosen the path of destitution.</em>
@@ -38,8 +38,8 @@ module.exports = async helper => {
     }
 
     // Test 1 - 100
-    stdout = await executeScript(py, programPath, ['50', '50']);
-    if (stdout.indexOf('plenty') < 0) {
+    stdout = await executeScript(py, programPath, ["50", "50"]);
+    if (stdout.indexOf("plenty") < 0) {
       throw new NiceError(`
         When the sum of the input numbers is 1 to 100, you should print the
         message: <em>You have chosen the path of plenty.</em>
@@ -47,8 +47,8 @@ module.exports = async helper => {
     }
 
     // Test 101+
-    stdout = await executeScript(py, programPath, ['50', '51']);
-    if (stdout.indexOf('excess') < 0) {
+    stdout = await executeScript(py, programPath, ["50", "51"]);
+    if (stdout.indexOf("excess") < 0) {
       throw new NiceError(`
         When the sum of the input numbers is greater than 100, you should print the
         message: <em>You have chosen the path of excess.</em>
@@ -61,7 +61,7 @@ module.exports = async helper => {
     `);
   } catch (e) {
     console.log(e);
-    if (e.name === 'NiceError') {
+    if (e.name === "NiceError") {
       helper.fail(e.message);
     } else {
       helper.fail(`

@@ -1,11 +1,11 @@
-const path = require('path');
-const jetpack = require('fs-jetpack');
-const { 
-  NiceError, 
-  executeScript, 
+const path = require("path");
+const jetpack = require("fs-jetpack");
+const {
+  NiceError,
+  executeScript,
   checkSetup,
-  executePythonCode 
-} = require('../../validation');
+  executePythonCode,
+} = require("../../../../scripts/objectiveValidation");
 
 // Append this python code to the user-created code - it will execute and
 // validate that the user's script did what we expected
@@ -37,13 +37,10 @@ assert c.full_name() == "Dio Brando", "The full_name instance method does not wo
 
 `;
 
-module.exports = async helper => {
+module.exports = async (helper) => {
   try {
     const py = helper.env.TQ_PYTHON_EXE;
-    const programPath = path.join(
-      helper.env.TQ_PYTHON_CODE_PATH,
-      'citizen.py'
-    );
+    const programPath = path.join(helper.env.TQ_PYTHON_CODE_PATH, "citizen.py");
 
     // Ensure prerequisite stuff is set up
     await checkSetup(py, programPath);
@@ -58,12 +55,12 @@ module.exports = async helper => {
     // Now, do an assertion check of the code with our own python code appended
     const code = await jetpack.readAsync(programPath);
     const testCode = `${code}\n\n${VALIDATION_PYTHON_CODE}`;
-    
+
     const testResult = await executePythonCode(helper.env, testCode, ARGS);
     console.log(testResult);
     if (testResult.exitCode !== 0) {
-      if (testResult.stderr.indexOf('AssertionError:') > 0) {
-        const assertionText = testResult.stderr.split('AssertionError:')[1];
+      if (testResult.stderr.indexOf("AssertionError:") > 0) {
+        const assertionText = testResult.stderr.split("AssertionError:")[1];
         throw new NiceError(`
           Looks like there's a small problem. ${assertionText}
         `);
@@ -81,7 +78,7 @@ module.exports = async helper => {
     `);
   } catch (e) {
     console.log(e);
-    if (e.name === 'NiceError') {
+    if (e.name === "NiceError") {
       helper.fail(e.message);
     } else {
       helper.fail(`

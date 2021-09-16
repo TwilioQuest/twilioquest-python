@@ -1,16 +1,16 @@
-const path = require('path');
-const { 
-  NiceError, 
-  executeScript, 
-  checkSetup
-} = require('../../validation');
+const path = require("path");
+const {
+  NiceError,
+  executeScript,
+  checkSetup,
+} = require("../../../../scripts/objectiveValidation");
 
-module.exports = async helper => {
+module.exports = async (helper) => {
   try {
     const py = helper.env.TQ_PYTHON_EXE;
     const programPath = path.join(
       helper.env.TQ_PYTHON_CODE_PATH,
-      'fizzbuzz.py'
+      "fizzbuzz.py"
     );
 
     // Ensure prerequisite stuff is set up
@@ -18,9 +18,12 @@ module.exports = async helper => {
 
     // Test a sequence of numbers
     const stdout = await executeScript(py, programPath, [
-      '-3000', '7', '6', '100'
+      "-3000",
+      "7",
+      "6",
+      "100",
     ]);
-    const lines = stdout.split('\n');
+    const lines = stdout.split("\n");
 
     if (lines.length < 4) {
       throw new NiceError(`
@@ -29,9 +32,9 @@ module.exports = async helper => {
         output.
       `);
     }
-    
+
     const l1 = lines[0].trim();
-    if (l1 !== 'fizzbuzz') {
+    if (l1 !== "fizzbuzz") {
       throw new NiceError(`
         We passed your script a number that was divisible by both 3 and 5, and
         expected you to print <em>fizzbuzz</em>, but instead you printed
@@ -40,7 +43,7 @@ module.exports = async helper => {
     }
 
     const l2 = lines[1].trim();
-    if (l2 !== '7') {
+    if (l2 !== "7") {
       throw new NiceError(`
         We passed your script the number <em>7</em> which is divisible by 
         neither 3 or 5, and expected you to print the number. Instead, you 
@@ -49,7 +52,7 @@ module.exports = async helper => {
     }
 
     const l3 = lines[2].trim();
-    if (l3 !== 'fizz') {
+    if (l3 !== "fizz") {
       throw new NiceError(`
         We passed your script a number that was divisible by 3 but not 5, and
         expected you to print <em>fizz</em>, but instead you printed
@@ -58,7 +61,7 @@ module.exports = async helper => {
     }
 
     const l4 = lines[3].trim();
-    if (l4 !== 'buzz') {
+    if (l4 !== "buzz") {
       throw new NiceError(`
         We passed your script a number that was divisible by 5 but not 3, and
         expected you to print <em>buzz</em>, but instead you printed
@@ -72,7 +75,7 @@ module.exports = async helper => {
     `);
   } catch (e) {
     console.log(e);
-    if (e.name === 'NiceError') {
+    if (e.name === "NiceError") {
       helper.fail(e.message);
     } else {
       helper.fail(`
