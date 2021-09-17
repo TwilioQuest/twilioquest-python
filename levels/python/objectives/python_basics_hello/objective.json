@@ -1,0 +1,16 @@
+{
+  "title": "Python Initiation: Pythonic Greeting",
+  "description": "Write a Python program that <span class=\"highlight\">outputs a traditional Pythonic greeting</span> to your terminal window.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "programPath",
+      "type": "text",
+      "placeholder": "/Users/jane/quest/salutation.py",
+      "label": "Paste in the full path to your Python program."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

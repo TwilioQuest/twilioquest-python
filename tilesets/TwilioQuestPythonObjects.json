@@ -8,80 +8,10 @@
  "margin":0,
  "name":"TwilioQuestPythonObjects",
  "spacing":0,
- "tilecount":8,
+ "tilecount":7,
  "tiledversion":"1.6.0",
  "tileheight":48,
  "tiles":[
-        {
-         "id":0,
-         "image":"..\/objects\/light-green\/icon.png",
-         "imageheight":24,
-         "imagewidth":24,
-         "objectgroup":
-            {
-             "draworder":"index",
-             "name":"",
-             "objects":[
-                    {
-                     "height":5,
-                     "id":1,
-                     "name":"",
-                     "rotation":0,
-                     "type":"",
-                     "visible":true,
-                     "width":9,
-                     "x":7,
-                     "y":16
-                    }],
-             "opacity":1,
-             "type":"objectgroup",
-             "visible":true,
-             "x":0,
-             "y":0
-            },
-         "properties":[
-                {
-                 "name":"objectiveName",
-                 "type":"string",
-                 "value":"example_objective"
-                }],
-         "type":"light-green"
-        }, 
-        {
-         "id":1,
-         "image":"..\/objects\/globe\/icon.png",
-         "imageheight":24,
-         "imagewidth":24,
-         "objectgroup":
-            {
-             "draworder":"index",
-             "name":"",
-             "objects":[
-                    {
-                     "height":8,
-                     "id":1,
-                     "name":"",
-                     "rotation":0,
-                     "type":"",
-                     "visible":true,
-                     "width":9,
-                     "x":7,
-                     "y":16
-                    }],
-             "opacity":1,
-             "type":"objectgroup",
-             "visible":true,
-             "x":0,
-             "y":0
-            },
-         "properties":[
-                {
-                 "name":"interactable",
-                 "type":"bool",
-                 "value":true
-                }],
-         "type":"globe"
-        }, 
         {
          "id":2,
          "image":"..\/objects\/rock\/rock.png",
@@ -90,7 +20,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -120,7 +49,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -166,7 +94,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -212,7 +139,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -258,7 +184,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -304,7 +229,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -341,6 +265,19 @@
                  "value":true
                 }],
          "type":"ghost4"
+        }, 
+        {
+         "id":8,
+         "image":"..\/objects\/blocker\/icon.png",
+         "imageheight":24,
+         "imagewidth":24,
+         "properties":[
+                {
+                 "name":"objectiveName",
+                 "type":"string",
+                 "value":"example_objective"
+                }],
+         "type":"blocker"
         }],
  "tilewidth":48,
  "type":"tileset",

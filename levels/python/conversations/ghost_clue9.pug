@@ -1,0 +1,17 @@
+- 
+  const STATE_KEY = 'pythonWorldState';
+  const worldState = getState(STATE_KEY) || {};
+  worldState.clues['nine'] = true;
+  worldState.cluesFound = Object.keys(worldState.clues).length;
+  setState(STATE_KEY, worldState);
+
+
+// Responses
+
+conversation(display_name="A Ghostly Denizen")
+  statement#default
+  responses
+  statements
+    statement#default
+      text.
+        Here is your NINTH clOOoOooooo!

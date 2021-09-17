@@ -1,0 +1,15 @@
+{
+  "title": "Python Initiation: Lists",
+  "description": "Lists are useful in real life and in our Python code. Learn how to <span class=\"highlight\">create and work with lists</span> in your code.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Create a program as described in the tutorial on the left, then click <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

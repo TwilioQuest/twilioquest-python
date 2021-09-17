@@ -1,0 +1,15 @@
+{
+  "title": "Python Initiation: Conditional Logic",
+  "description": "Learn to <strong>branch your code</strong> and execute different logic based on boolean comparisons.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Create a program as described in the tutorial on the left, then click <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

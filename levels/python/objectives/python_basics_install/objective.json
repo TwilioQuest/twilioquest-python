@@ -1,0 +1,16 @@
+{
+  "title": "Python Initiation: Install Python 3",
+  "description": "Install a <span class=\"highlight\">Python interpreter</span> on your computer so you can write and execute Python code.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "pythonPath",
+      "type": "text",
+      "placeholder": "/usr/local/bin/python3",
+      "label": "Paste in the path to your Python interpreter as described in the tutorial."
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

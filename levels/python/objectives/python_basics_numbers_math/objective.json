@@ -1,0 +1,15 @@
+{
+  "title": "Python Initiation: Numbers and Math",
+  "description": "Learn how to <strong>work with numbers</strong> and perform basic math calculations in Python.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Create a program as described in the tutorial on the left, then click <em>HACK</em>."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}
