@@ -6,7 +6,7 @@
   "priority": 2,
   "navMap": {
     "x": 55,
-    "y": 75,
+    "y": 65,
     "sprite": "nav_map/pythonic_temple.png"
   },
   "is_mission": false,
