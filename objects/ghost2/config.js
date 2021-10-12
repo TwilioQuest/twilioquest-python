@@ -1,9 +1,11 @@
-const conversationOnInteract = require("../../scripts/conversationOnInteract");
+const onPlayerDidInteract = require('../../scripts/npcPlayerDidInteract');
+const onMapDidLoad = require('../../scripts/ghostMapDidLoad');
+const onConversationDidEnd = require('../../scripts/ghostConversationDidEnd');
 
 module.exports = {
   spriteSheets: {
     tq_python_ghost2: {
-      fileName: "NPC_PythonicGhost2.png",
+      fileName: 'NPC_PythonicGhost2.png',
       frameDimensions: {
         width: 32,
         height: 32,
@@ -17,12 +19,14 @@ module.exports = {
     },
   },
   events: {
-    onPlayerDidInteract: conversationOnInteract,
+    onPlayerDidInteract,
+    onMapDidLoad,
+    onConversationDidEnd,
   },
   properties: {
     sprite: {
       defaultFrameIndex: 0,
-      spriteSheet: "tq_python_ghost2",
+      spriteSheet: 'tq_python_ghost2',
     },
     idleAnimations: {
       animations: { idle: 100 },

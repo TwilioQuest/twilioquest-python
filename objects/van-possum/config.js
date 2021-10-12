@@ -1,4 +1,4 @@
-const conversationOnInteract = require("../../scripts/conversationOnInteract");
+const onPlayerDidInteract = require("../../scripts/npcPlayerDidInteract");
 
 module.exports = {
   spriteSheets: {
@@ -17,7 +17,7 @@ module.exports = {
     },
   },
   events: {
-    onPlayerDidInteract: conversationOnInteract,
+    onPlayerDidInteract,
   },
   properties: {
     sprite: {

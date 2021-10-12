@@ -1,5 +1,7 @@
-- const STATE_KEY = 'pythonWorldState';
-- const worldState = getState(STATE_KEY);
+-
+  const STATE_KEY = 'pythonWorldState';
+  const worldState = getState(STATE_KEY);
+  const hasStaff = inventory.includes('python_staff');
 
 mixin flavor
   response#flavor.
@@ -47,8 +49,12 @@ conversation(display_name="Toledo Van Possum")
     when "get_started"
       statement#get_started
       responses
-        response#ack.
-          I'm on it - I'll explore the initiation ritual chamber and see what I can find.
+        if hasStaff
+          +what_happened
+          +who_are_you
+        else
+          response#ack.
+            I'm on it - I'll explore the initiation ritual chamber and see what I can find.
 
     default
       if !worldState.toledoInitialGreeting
@@ -60,6 +66,12 @@ conversation(display_name="Toledo Van Possum")
             I don't think we've been introduced?
           +what_happened
           +get_started
+
+      else if hasStaff
+        statement#thanks
+        responses
+          +what_happened
+          +who_are_you
 
       else
         statement#follow_up_greeting
@@ -80,14 +92,25 @@ conversation(display_name="Toledo Van Possum")
         Operator, hello again. Have you discovered anything while exploring the
         temple?
 
-    statement#get_started
+    statement#thanks
       text.
-        A cave-in blocked progress into much of the temple, but I managed to clear 
-        the entrance to the <span class="highlight">Initiation Ritual Chamber</span>.
-        This is where new citizens in the ancient City of Python would complete 
-        a critical rite of passage.<br/><br/> I've explored the chamber somewhat, 
-        but I appear to have triggered some security mechanisms that have barred 
-        my progress. Would you be willing to resume my research in this area?
+        Is that... the <span class="highlight">Staff of Pythonic Knowledge</span>?
+        Ahahaha I knew it! I knew it was real! This is an incredible find, great work!
+
+    statement#get_started
+      if hasStaff
+        text.
+          You've already helped more than you can imagine - the Staff of
+          Pythonic Knowledge is a legendary artifact. You must be quite the 
+          programmer to have pulled that off!
+      else
+        text.
+          A cave-in blocked progress into much of the temple, but I managed to clear 
+          the entrance to the <span class="highlight">Initiation Ritual Chamber</span>.
+          This is where new citizens in the ancient City of Python would complete 
+          a critical rite of passage.<br/><br/> I've explored the chamber somewhat, 
+          but I appear to have triggered some security mechanisms that have barred 
+          my progress. Would you be willing to resume my research in this area?
 
     statement#ack
       text.

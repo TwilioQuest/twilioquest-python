@@ -1,5 +1,5 @@
 module.exports = function (self, event, world) {
-  if (self !== event.target) {
+  if (self !== event.target || !self.interactable) {
     // This isn't our conversationalist
     return;
   }

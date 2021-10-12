@@ -21,9 +21,9 @@ New citizens in the ancient <b>City of Python</b> were required to solve a serpe
 <% if (pystate.cluesFound === 0) { %>
 Near the chest containing the staff, you see a weathered stone tablet. It contains a 3x3 grid of squares. Each square looks like it may have had something written on it, but the ages have erased any trace of the lettering:
 <% } else if (pystate.cluesFound > 0) { %>
-Near the chest containing the staff, you see a weathered stone tablet. It contains a 3x3 grid of squares. Using a nearby chisel, you gently etch in the letters you have revealed from the research notes scattered about the chamber:
+Near the chest containing the staff, you see a weathered stone tablet. It contains a 3x3 grid of squares. Using a nearby chisel, you gently etch in the letters you have revealed from the ghosts haunting the chamber:
 <% } else { %>
-Near the chest containing the staff, you see a weathered stone tablet. It contains a 3x3 grid of squares. Now that you have found all the research notes, you are able to use a nearby chisel to etch a letter into each square. The completed puzzle is as follows:
+Near the chest containing the staff, you see a weathered stone tablet. It contains a 3x3 grid of squares. Now that you have found all the clues, you are able to use a nearby chisel to etch a letter into each square. The completed puzzle is as follows:
 <% } %>
 
 <style>
@@ -86,19 +86,19 @@ Near the chest containing the staff, you see a weathered stone tablet. It contai
 
 <% if (pystate.canSolvePuzzle) { %>
 ## Solving the Serpentine Word Puzzle
-Now that you have recovered all the research notes, the full Serpentine Word Puzzle has been revealed. It looks to be composed similarly to the game of [Boggle](https://en.wikipedia.org/wiki/Boggle). To solve the puzzle, you need to trace a continuous line between letters (up, down, left, right, or diagonally) to <b>spell a five-letter English language word</b>.
+Now that you have recovered all the clues, the full Serpentine Word Puzzle has been revealed. It looks to be composed similarly to the game of [Boggle](https://en.wikipedia.org/wiki/Boggle). To solve the puzzle, you need to trace a continuous line between letters (up, down, left, right, or diagonally) to <b>spell a five-letter English language word</b>.
 
 Once you have found the word (there may be more than one), enter it into the text field on the right and click *HACK*.
 <% } %>
 
 ## Reconstructing the Puzzle
 
-The <b>TwilioQuest Program</b> sent a research team led by the legendary explorer <b>Toledo Van Possum</b> to study these ruins. Toledo and his team have gone missing, but you may be able to recover some of their research. You should search the ruins of the Initiation Ritual Chamber for <b>Toledo's research notes</b> - they could contain the clues you need to solve this puzzle.
+The ghostly figures haunting the initiation ritual chamber hold the clues to unraveling this mystery. <b>Find and speak to all of the spirits in this chamber</b>, and they will uncover one of the clues you need to solve this puzzle.
 
 To make your way through the area, you will need to overcome a series of trials - the same ones placed before the first Pythonistas on their path to citizenship in the City of Python. By mastering the basic principles of the [Python programming language](https://www.python.org/), you should be able to follow in their footsteps and uncover the secrets of the Initiation Ritual Chamber.
 
 <% if (pystate.canSolvePuzzle) { %>
-Now that you have collected all the clues left by Toledo's research team, you can solve the final puzzle. Enter the solution to the puzzle (described beneath the grid above) in the text field and click *HACK* to claim the staff!
+Now that you have collected all the clues, you can solve the final puzzle. Enter the solution to the puzzle (described beneath the grid above) in the text field and click *HACK* to claim the staff!
 <% } else { %>
 As you __recover clues__, the __puzzle above will change__. Once you have recovered __all nine clues__, you will be able to return here and solve the puzzle!
 <% } %>
