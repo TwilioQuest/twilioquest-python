@@ -1,5 +1,7 @@
-const handleToldeo = require('./events/handleToldeo');
-const handleSage = require('./events/handleSage');
+const handleToldeo = require("./events/handleToldeo");
+const handleSage = require("./events/handleSage");
+const packageInfo = require("../../package.json");
+const updateQuestLogWhenComplete = require("./events/updateQuestLogWhenComplete");
 
 // Default Python world state
 const DEFAULT_WORLD_STATE = {
@@ -12,9 +14,11 @@ const DEFAULT_WORLD_STATE = {
   sageInitialGreeting: false,
 };
 
+const WORLD_STATE_KEY = "pythonWorldState";
+
 module.exports = function (event, world) {
   // Get current state of the python world
-  const pystate = world.getState('pythonWorldState') || DEFAULT_WORLD_STATE;
+  const pystate = world.getState(WORLD_STATE_KEY) || DEFAULT_WORLD_STATE;
 
   // Wire up event scripting
   handleToldeo(event, world, pystate);
@@ -26,9 +30,9 @@ module.exports = function (event, world) {
   // Update clue status, if relevant
   console.log(event.target);
   if (
-    event.name === 'conversationDidEnd' &&
-    event.npc && 
-    event.npc.conversation.indexOf('ghost_clue') === 0
+    event.name === "conversationDidEnd" &&
+    event.npc &&
+    event.npc.conversation.indexOf("ghost_clue") === 0
   ) {
     let message = `
       <em>
@@ -46,6 +50,16 @@ module.exports = function (event, world) {
     `);
   }
 
+  updateQuestLogWhenComplete({
+    notification:
+      'I\'ve completed everything in the <span class="highlight">Pythonic Temple</span> for now!',
+    log: "I've completed everything in the Pythonic Temple for now!",
+    event,
+    world,
+    worldStateKey: WORLD_STATE_KEY,
+    version: packageInfo.version,
+  });
+
   // Finally, persist current python world state
-  world.setState('pythonWorldState', pystate);
+  world.setState(WORLD_STATE_KEY, pystate);
 };
