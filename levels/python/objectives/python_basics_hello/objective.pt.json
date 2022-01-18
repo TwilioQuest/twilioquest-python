@@ -1,0 +1,16 @@
+{
+  "title": "Inicialização Python: Saudação pitônica",
+  "description": "Escreva um programa Python que  <span class=\"highlight\">envie uma saudação pitônica tradicional</span> para sua janela do terminal.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "programPath",
+      "type": "text",
+      "placeholder": "/Users/jane/quest/salutation.py",
+      "label": "Cole no caminho completo do seu programa Python."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

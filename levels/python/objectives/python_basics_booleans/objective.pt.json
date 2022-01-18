@@ -1,0 +1,15 @@
+{
+  "title": "Inicialização Python: Booleanos",
+  "description": "Aprenda a usar <strong>booleanos</strong> para representar o conceito de verdadeiro e falso em seu código Python. Use uma <strong>instrução IF</strong> para agir sob as circunstâncias corretas.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Crie um programa conforme descrito no tutorial à esquerda e clique em <span class='highlight'>HACK</span> (HACKEAR)."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

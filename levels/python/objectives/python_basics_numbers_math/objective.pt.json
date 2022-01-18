@@ -1,0 +1,15 @@
+{
+  "title": "Inicialização Python: Números e matemática",
+  "description": "Saiba como <strong>trabalhar com números</strong> e executar cálculos matemáticos básicos no Python.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Crie um programa conforme descrito no tutorial à esquerda e clique em <em>HACK</em>."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

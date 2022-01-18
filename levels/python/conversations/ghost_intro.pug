@@ -5,19 +5,19 @@
 
 mixin flavor
   response#flavor.
-    You've mentioned "the Fullstack Python" a few times - what is it?
+    !{getTranslatedString('python.ghost_intro.flavor_response')}
 
 mixin who_are_you
   response#who_are_you.
-    Could you remind me who you are?
+    !{getTranslatedString('python.ghost_intro.who_are_you_response')}
 
 mixin what_happened
   response#what_happened.
-    Why do you remain here, in the chamber?
+    !{getTranslatedString('python.ghost_intro.what_happened_response')}
 
 mixin get_started
   response#get_started.
-    What is this chamber? Is there anything I can learn about your society here?
+    !{getTranslatedString('python.ghost_intro.get_started_response')}
 
 conversation(display_name="Great Pythonic Sage")
   case lastResponse
@@ -50,7 +50,7 @@ conversation(display_name="Great Pythonic Sage")
       statement#get_started
       responses
         response#ack.
-          If I were to complete the trials, could I recover this artifact?
+          !{getTranslatedString('python.ghost_intro.lastResponse.get_started')}
 
     default
       if !worldState.greatSageInitialGreeting
@@ -58,7 +58,7 @@ conversation(display_name="Great Pythonic Sage")
         statement#default
         responses
           response#who_are_you.
-            Ahh, are you... what are you?
+            !{getTranslatedString('python.ghost_intro.lastResponse.default')}
           +what_happened
           +get_started
 
@@ -78,62 +78,39 @@ conversation(display_name="Great Pythonic Sage")
   statements
     statement#default
       text.
-        Blessings of the Fullstack Python be upon you. In life, I was the Great 
-        Pythonic Sage, a guide for all who sought the wisdom of Python. Why have 
-        you come to this place?
+        !{getTranslatedString('python.ghost_intro.default')}
 
     statement#thanks
       text.
-        You have retrieved the Staff of Pythonic Knowledge. May it serve you well.
+        !{getTranslatedString('python.ghost_intro.thanks')}
 
     statement#follow_up_greeting
       text.
-        Blessings of the Fullstack Python be upon you, traveler. What wisdom do 
-        you seek?
+        !{getTranslatedString('python.ghost_intro.follow_up_greeting')}
 
     statement#get_started
       text.
-        There is much wisdom to be found here, for those with the conviction to 
-        seek it out. Here in the Initiation Ritual Chamber, we would embue 
-        initiates with the core truths of our Pythonic tradition.<br/><br/>
-        When an initiate would complete the trials, they would earn the
-        <span class="highlight">Staff of Pythonic Knowledge</span>, a gift from 
-        the Fullstack Python herself, as a symbol of their achievement.
+        !{getTranslatedString('python.ghost_intro.get_started')}
 
     statement#ack
       if hasStaff
         text.
-          I... am confused by your statement. You have already obtained this,
-          our most treasured relic.
+          !{getTranslatedString('python.ghost_intro.ack.hasStaff')}
       else
         text.
-          You could. The path is long, but I and the rest of my college of Pythonic 
-          sages would be glad of the company after all these years. We yearn to 
-          see our traditions observed once more.<br/><br/>
-          <span class="highlight">Speak to my fellow sages</span>, and listen to
-          their tales. Their wisdom will light your path through the darkness.
+          !{getTranslatedString('python.ghost_intro.ack.else')}
 
     statement#what_happened
       text.
-        I do not know. I remember a great disturbance, and then I awoke to find myself 
-        here. I know not what forces returned me to this place, but I feel
-        compelled to complete my duty as guide to the seekers one final time.
+        !{getTranslatedString('python.ghost_intro.what_happened')}
     
     statement#great_sage
       text.
-        In life, I was the <span class="highlight">Great Pythonic Sage</span>, 
-        the guide of all who sought the wisdom of Python. My order serves at the 
-        behest of the Fullstack Python, the source of our knowledge. We are charged 
-        with the sacred duty of passing on what we have learned.
+        !{getTranslatedString('python.ghost_intro.great_sage')}
     
     statement#flavor
       text.
-        She goes by many names - the Forever Serpent, the Wise Mother, and more 
-        that I have forgotten. But the <a href="https://www.fullstackpython">
-        Fullstack Python</a> is the source of our 
-        Pythonic knowledge, and of our power to build and create. We serve her 
-        still as we seek to empower new initiates with the ability to create 
-        new worlds in The Cloud using Python.
+        !{getTranslatedString('python.ghost_intro.flavor')}
 
 // Flush world state changes, if any
 - setState(STATE_KEY, worldState);

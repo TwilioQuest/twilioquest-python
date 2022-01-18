@@ -1,0 +1,15 @@
+{
+  "title": "Inicialização Python: Valores de retorno de função",
+  "description": "<span class=\"highlight\">Retorne dados</span> das funções depois que a função processar a entrada.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Crie um programa conforme descrito no tutorial à esquerda e clique em <span class='highlight'>HACK</span> (HACKEAR)."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

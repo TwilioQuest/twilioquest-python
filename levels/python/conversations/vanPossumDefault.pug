@@ -5,19 +5,19 @@
 
 mixin flavor
   response#flavor.
-    How does one become a Cloud Archaeologist?
+    !{getTranslatedString('python.vanPossumDefault.flavor_response')}
 
 mixin who_are_you
   response#who_are_you.
-    Could you remind me who you are, and what you do here?
+    !{getTranslatedString('python.vanPossumDefault.who_are_you_response')}
 
 mixin what_happened
   response#what_happened.
-    You seem to be alone here - what happened to the rest of the team?
+    !{getTranslatedString('python.vanPossumDefault.what_happened_response')}
 
 mixin get_started
   response#get_started.
-    How can I help the exploration efforts in the temple?
+    !{getTranslatedString('python.vanPossumDefault.get_started_response')}
 
 conversation(display_name="Toledo Van Possum")
   case lastResponse
@@ -54,7 +54,7 @@ conversation(display_name="Toledo Van Possum")
           +who_are_you
         else
           response#ack.
-            I'm on it - I'll explore the initiation ritual chamber and see what I can find.
+            !{getTranslatedString('python.vanPossumDefault.lastResponse.get_started')}
 
     default
       if !worldState.toledoInitialGreeting
@@ -62,8 +62,7 @@ conversation(display_name="Toledo Van Possum")
         statement#default
         responses
           response#who_are_you.
-            It does look like these ruins are a bit more... ruined. I'm sorry, 
-            I don't think we've been introduced?
+            !{getTranslatedString('python.vanPossumDefault.lastResponse.default')}
           +what_happened
           +get_started
 
@@ -83,68 +82,39 @@ conversation(display_name="Toledo Van Possum")
   statements
     statement#default
       text.
-        Operator! I was told to expect your arrival. I wish I were better
-        provisioned to welcome you properly, but as you can see, our work here 
-        has suffered a bit of a setback.
+        !{getTranslatedString('python.vanPossumDefault.default')}
 
     statement#follow_up_greeting
       text.
-        Operator, hello again. Have you discovered anything while exploring the
-        temple?
+        !{getTranslatedString('python.vanPossumDefault.follow_up_greeting')}
 
     statement#thanks
       text.
-        Is that... the <span class="highlight">Staff of Pythonic Knowledge</span>?
-        Ahahaha I knew it! I knew it was real! This is an incredible find, great work!
+        !{getTranslatedString('python.vanPossumDefault.thanks')}
 
     statement#get_started
       if hasStaff
         text.
-          You've already helped more than you can imagine - the Staff of
-          Pythonic Knowledge is a legendary artifact. You must be quite the 
-          programmer to have pulled that off!
+          !{getTranslatedString('python.vanPossumDefault.get_started.hasStaff')}
       else
         text.
-          A cave-in blocked progress into much of the temple, but I managed to clear 
-          the entrance to the <span class="highlight">Initiation Ritual Chamber</span>.
-          This is where new citizens in the ancient City of Python would complete 
-          a critical rite of passage.<br/><br/> I've explored the chamber somewhat, 
-          but I appear to have triggered some security mechanisms that have barred 
-          my progress. Would you be willing to resume my research in this area?
+          !{getTranslatedString('python.vanPossumDefault.get_started.else')}
 
     statement#ack
       text.
-        Splendid. Though I should note that since the cave-in, I have heard some 
-        suspicious noises emanating from the chamber. But I'm sure it's just the 
-        wind... in a stagnant, underground temple...
+        !{getTranslatedString('python.vanPossumDefault.ack')}
 
     statement#what_happened
       text.
-        I sent the rest of the team home after a cave-in blocked off most of the
-        temple. It happened completely out of the blue, despite our analysis that 
-        the temple was structurally sound and safe for exploration. I wouldn't be 
-        surprised to learn that the <span style="color:red">Legacy Systems</span>
-        were behind this somehow.<br/><br/>I am coordinating a salvage team to 
-        unblock the rest of the temple, but until then, there is little else for 
-        the team to do.
+        !{getTranslatedString('python.vanPossumDefault.what_happened')}
     
     statement#toledo
       text.
-        <span class="highlight">Toledo Van Possum</span>, Cloud Archaeologist, 
-        and leader of the TwilioQuest research team here at the temple. Though 
-        it's not much of a team anymore, is it?<br/><br/> Even so, the opportunity 
-        to study the temple is intoxicating. The secrets found inside these 
-        walls could fundamentally transform our understanding of the Python 
-        programming language.
+        !{getTranslatedString('python.vanPossumDefault.toledo')}
     
     statement#flavor
       text.
-        Many years ago, I was a software developer working at a bank in the
-        Netherlands. Banking software, at least to me, was not intrinsically 
-        exciting, but uncovering the history was.<br/><br/>Why is this function 
-        here? How did this architecture pattern come into use? What were the 
-        constraints and trade-offs? These questions started me on a path to
-        trying to understand why the Cloud is the way it is.
+        !{getTranslatedString('python.vanPossumDefault.flavor')}
 
 // Flush world state changes, if any
 - setState(STATE_KEY, worldState);

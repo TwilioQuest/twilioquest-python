@@ -1,0 +1,16 @@
+{
+  "title": "Inicialização Python: Instalar o Python 3",
+  "description": "Instale um <span class=\"highlight\">interpretador Python</span> em seu computador para poder escrever e executar o código Python.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "pythonPath",
+      "type": "text",
+      "placeholder": "/usr/local/bin/python3",
+      "label": "Cole no caminho para o interpretador Python, conforme descrito no tutorial."
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

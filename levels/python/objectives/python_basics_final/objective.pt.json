@@ -1,0 +1,19 @@
+{
+  "title": "Inicialização Python: Cajado do conhecimento pitônico",
+  "description": "Desvende os mistérios da Câmara do ritual de iniciação e reivindique o lendário <span class=\"highlight\">Cajado do conhecimento pitônico</span>!",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "puzzleAnswer",
+      "type": "text",
+      "placeholder": "???",
+      "label": "Insira sua resposta para o quebra-cabeça descrito à esquerda."
+    }
+  ],
+  "rewards": {
+    "xp": 1000,
+    "items": [
+      "python_staff"
+    ]
+  }
+}

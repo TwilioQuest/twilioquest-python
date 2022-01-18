@@ -1,0 +1,15 @@
+{
+  "title": "O Templo Pitônico",
+  "description": "Siga os passos do lendário explorador Toledo Van Possum enquanto descobre os mistérios do templo pitônico, a última estrutura sobrevivente da antiga cidade de Python. Saiba como usar a linguagem de programação Python e outras ferramentas relacionadas para concluir sua busca.",
+  "questTitle": "O Templo Pitônico",
+  "questDescription": "Descubra os segredos dos antigos pitonistas!",
+  "priority": 2,
+  "navMap": {
+    "x": 55,
+    "y": 65,
+    "sprite": "nav_map/pythonic_temple.png"
+  },
+  "is_mission": false,
+  "backgroundMusic": "unsettlingarea_59895b",
+  "flavorTextOverrides": {}
+}
