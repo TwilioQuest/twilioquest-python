@@ -22,27 +22,17 @@ module.exports = async (helper) => {
 
     // Check the output for the target string
     if (stdout.indexOf("I AM SO STOKED!!!") < 0) {
-      throw new NiceError(`
-        It looks like your code is not quite stoked enough yet. Make sure to:
-        <br/>
-        - Transform the input string to <span class="highlight">all caps</span></br>
-        - Append <span class="highlight">three exclamation points</span> to the end</br>
-        - <span class="highlight">print()</span> the resulting transformed string
-      `);
+      throw new NiceError(helper.world.getTranslatedString('python.python_basics_strings.codeNotStoked'));
     }
 
     // If we make it this far, we've passed validation
-    helper.success(`
-      EXCELLENT!!! You have completed the <em>Trial of Words</em>.
-    `);
+    helper.success(helper.world.getTranslatedString('python.python_basics_strings.success'));
   } catch (e) {
     console.log(e);
     if (e.name === "NiceError") {
       helper.fail(e.message);
     } else {
-      helper.fail(`
-        Sorry! We couldn't successfully run your Python script.
-      `);
+      helper.fail(helper.world.getTranslatedString('python.validators.sorry'));
     }
   }
 };

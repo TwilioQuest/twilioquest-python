@@ -252,7 +252,7 @@ module.exports = {
   <br/>
   - Transformar a string de entrada para <span class='highlight'>todas as maiúsculas</span></br>
   - Anexar <span class='highlight'>três pontos de exclamação</span> ao final</br>
-  - <span class='highlight'>imprimir()</span> a string transformada resultante`,
+  - <span class='highlight'>print()</span> a string transformada resultante`,
   "python.python_basics_strings.success": "EXCELENTE!!! Você concluiu o <em>Teste de palavras</em>.",
   "python.python_basics_variables.success": `Excelente! Você aprendeu a importância de nomear seus dados e
   concluiu o <em>Teste de nomenclatura</em>.`,

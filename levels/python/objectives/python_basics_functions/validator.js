@@ -48,36 +48,23 @@ module.exports = async (helper) => {
     if (testResult.exitCode !== 0) {
       if (testResult.stderr.indexOf("AssertionError:") > 0) {
         const assertionText = testResult.stderr.split("AssertionError:")[1];
-        throw new NiceError(`
-          Looks like there's a small problem. ${assertionText}
-        `);
+        throw new NiceError(helper.world.getTranslatedString('python.validators.smallProblem', { assertionText }));
       } else {
-        throw new NiceError(`
-          We couldn't validate your Python code - please try again.
-        `);
+        throw new NiceError(helper.world.getTranslatedString('python.validators.tryAgain'));
       }
     } else if (testResult.stdout.toLowerCase().indexOf("hail, friend") < 0) {
       // It should contain the text "hail, friend"
-      throw new NiceError(`
-        We didn't see the requested string of text output by your
-        <span class="highlight">hail_friend</span> function. It needs to print
-        the string "Hail, friend!"
-      `);
+      throw new NiceError(helper.world.getTranslatedString('python.python_basics_functions.didntSee'));
     }
 
     // If we make it this far, we've passed validation
-    helper.success(`
-      Well done! Not only did you put the "fun" in "function", you also passed
-      the <em>Trial of Reusability</em>.
-    `);
+    helper.success(helper.world.getTranslatedString('python.python_basics_functions.success'));
   } catch (e) {
     console.log(e);
     if (e.name === "NiceError") {
       helper.fail(e.message);
     } else {
-      helper.fail(`
-        Sorry! We couldn't successfully run your Python script.
-      `);
+      helper.fail(helper.world.getTranslatedString('python.validators.sorry'));
     }
   }
 };

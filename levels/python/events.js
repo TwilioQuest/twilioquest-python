@@ -34,20 +34,12 @@ module.exports = function (event, world) {
     event.npc &&
     event.npc.conversation.indexOf("ghost_clue") === 0
   ) {
-    let message = `
-      <em>
-        you now have ${pystate.cluesFound} of the ${pystate.cluesTotal} clues
-      </em>
-    `;
+    let message = world.getTranslatedString('python.events.youNowHaveSome', { pystateCluesFound: pystate.cluesFound, pystateCluesTotal: pystate.cluesTotal });
     if (pystate.cluesFound === pystate.cluesTotal) {
-      message = `<em>you now have all the clues</em>`;
+      message = world.getTranslatedString('python.events.youNowHaveAll');
     }
 
-    world.showNotification(`
-      The ghostly figure dissipates, and you feel as if a small weight has been
-      lifted off your shoulders.<br/><br/> With the sage's help, ${message}
-      you need to recover the Staff of Pythonic Knowledge.
-    `);
+    world.showNotification(world.getTranslatedString('python.events.ghostlyFigure', { message }));
   }
 
   updateQuestLogWhenComplete({

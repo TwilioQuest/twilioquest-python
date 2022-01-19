@@ -10,29 +10,19 @@ module.exports = async (helper) => {
     const { programPath } = helper.validationFields;
 
     if (!programPath) {
-      throw new NiceError(`
-        Please provide a path to your Python script - e.g. C:\\code\\salutation.py
-      `);
+      throw new NiceError(helper.world.getTranslatedString('python.python_basics_hello.path'));
     }
 
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
-      throw new NiceError(`
-        We couldn't find a file at the path you provided. Please double check
-        that the file path you pasted in the test field is correct.
-      `);
+      throw new NiceError(helper.world.getTranslatedString('python.python_basics_hello.file'));
     }
 
     const stdout = await executeScript(helper.env.TQ_PYTHON_EXE, programPath);
     console.log(stdout);
 
     helper.success(
-      `
-      Great work! You have completed the Trial of Salutation. Write the code
-      for future challenges in the same folder as this file.
-      <br/><br/>
-      <span class="highlight"><em>For the glory of Python!</em></span>
-    `,
+      helper.world.getTranslatedString('python.python_basics_hello.success'),
       [{ name: "PYTHON_CODE_PATH", value: path.dirname(programPath) }]
     );
   } catch (e) {
@@ -40,9 +30,7 @@ module.exports = async (helper) => {
     if (e.name === "NiceError") {
       helper.fail(e.message);
     } else {
-      helper.fail(`
-        Sorry! We couldn't successfully run your Python script.
-      `);
+      helper.fail(helper.world.getTranslatedString('python.validators.sorry'));
     }
   }
 };

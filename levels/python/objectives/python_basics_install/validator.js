@@ -36,40 +36,23 @@ module.exports = async helper => {
         const [major, minor, patch] = version.split('.');
 
         if (major !== '3') {
-          helper.fail(`
-          It looks like you supplied <span class="highlight">${versionString}</span>. This mission requires <span class="highlight">Python 3</span>.
-        `);
+          helper.fail(helper.world.getTranslatedString('python.python_basics_install.python3', { versionString }));
           return;
         }
 
         helper.success(
-          `
-          Awesome! Looks like you have this version installed: <br/>
-          <span class="highlight">${versionString}</span>. You have completed
-          the Trial of Installation!
-        `,
+          helper.fail(helper.world.getTranslatedString('python.python_basics_install.success', { versionString })),
           [{ name: 'PYTHON_EXE', value: pythonPath }]
         );
       } else {
-        helper.fail(`
-          Welp... something went wrong when we tried to validate this Python
-          path. Double check the path and try again.
-
-          Error code: ${code}
-          Error signal: ${signal}
-        `);
+        helper.fail(helper.fail(helper.world.getTranslatedString('python.python_basics_install.validatingPathError', { code, signal  })));
       }
     });
   } catch (e) {
     if (e.name === 'NiceError') {
       helper.fail(e.message);
     } else {
-      helper.fail(`
-        Sorry! We couldn't validate your Python 3 installation. Please try
-        again.
-
-        ${e}
-      `);
+      helper.fail(helper.fail(helper.world.getTranslatedString('python.python_basics_install.couldntValidate', { e  })));
     }
   }
 };

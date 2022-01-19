@@ -22,51 +22,35 @@ module.exports = async (helper) => {
     // Test for zero
     stdout = await executeScript(py, programPath, ["-1", "1"]);
     if (stdout.indexOf("destitution") < 0) {
-      throw new NiceError(`
-        When the sum of the input numbers is zero or less, you should print the
-        message: <em>You have chosen the path of destitution.</em>
-      `);
+      throw new NiceError(helper.world.getTranslatedString('python.python_basics_conditional.sumIsZero'));
     }
 
     // Test negative
     stdout = await executeScript(py, programPath, ["-10", "1"]);
     if (stdout.indexOf("destitution") < 0) {
-      throw new NiceError(`
-        When the sum of the input numbers is zero or less, you should print the
-        message: <em>You have chosen the path of destitution.</em>
-      `);
+      throw new NiceError(helper.world.getTranslatedString('python.python_basics_conditional.sumIsZero'));
     }
 
     // Test 1 - 100
     stdout = await executeScript(py, programPath, ["50", "50"]);
     if (stdout.indexOf("plenty") < 0) {
-      throw new NiceError(`
-        When the sum of the input numbers is 1 to 100, you should print the
-        message: <em>You have chosen the path of plenty.</em>
-      `);
+      throw new NiceError(helper.world.getTranslatedString('python.python_basics_conditional.sumIs1To100'));
     }
 
     // Test 101+
     stdout = await executeScript(py, programPath, ["50", "51"]);
     if (stdout.indexOf("excess") < 0) {
-      throw new NiceError(`
-        When the sum of the input numbers is greater than 100, you should print the
-        message: <em>You have chosen the path of excess.</em>
-      `);
+      throw new NiceError(helper.world.getTranslatedString('python.python_basics_conditional.sumIsGreaterThan100'));
     }
 
     // If we make it this far, we've passed validation
-    helper.success(`
-      You have passed the <em>Trial of Branching Paths</em>!
-    `);
+    helper.success(helper.world.getTranslatedString('python.python_basics_conditional.success'));
   } catch (e) {
     console.log(e);
     if (e.name === "NiceError") {
       helper.fail(e.message);
     } else {
-      helper.fail(`
-        Sorry! We couldn't successfully run your Python script.
-      `);
+      helper.fail(helper.world.getTranslatedString('python.validators.sorry'));
     }
   }
 };

@@ -46,13 +46,9 @@ module.exports = async (helper) => {
       if (testResult.exitCode !== 0) {
         if (testResult.stderr.indexOf("AssertionError:") > 0) {
           const assertionText = testResult.stderr.split("AssertionError:")[1];
-          throw new NiceError(`
-            Looks like there's a small problem. ${assertionText}
-          `);
+          throw new NiceError(helper.world.getTranslatedString('python.validators.smallProblem', { assertionText }));
         } else {
-          throw new NiceError(`
-            We couldn't validate your Python code - please try again.
-          `);
+          throw new NiceError(helper.world.getTranslatedString('python.validators.tryAgain'));
         }
       }
     }
@@ -80,19 +76,13 @@ module.exports = async (helper) => {
     processTestRun(testResult);
 
     // If we make it this far, we've passed validation
-    helper.success(`
-      You have passed the Trial of Truth. 
-      <br/>
-      <em><i>For the glory of Python!</i></em>
-    `);
+    helper.success(helper.world.getTranslatedString('python.python_basics_booleans.passed'));
   } catch (e) {
     console.log(e);
     if (e.name === "NiceError") {
       helper.fail(e.message);
     } else {
-      helper.fail(`
-        Sorry! We couldn't successfully run your Python script.
-      `);
+      helper.fail(helper.world.getTranslatedString('python.validators.sorry'));
     }
   }
 };

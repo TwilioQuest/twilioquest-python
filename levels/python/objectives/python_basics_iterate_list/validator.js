@@ -29,14 +29,7 @@ module.exports = async (helper) => {
     async function fail(name, place) {
       await writeFile(programPath, "output.txt", ARGS, stdout);
 
-      throw new NiceError(`
-        It looks like your list output was a bit off - in the input we gave you,
-        the name "<span class="highlight">${name}</span>" was supposed to be 
-        printed with a <span class="highlight">${place}</span> prepended.
-        <br/><br/>
-        Check <em>output.txt</em> in your code folder for more info on what
-        we passed in, and what your script gave us in return.
-      `);
+      throw new NiceError(helper.world.getTranslatedString('python.python_basics_iterate_list.bitOff', { name, place }));
     }
     for (let i = 0, l = lines.length; i < l; i++) {
       const line = lines[i];
@@ -70,25 +63,17 @@ module.exports = async (helper) => {
 
     // Check that all five were printed
     if (found !== 5) {
-      throw new NiceError(`
-        We didn't see the five names we gave you in the printed output. Make
-        sure your script prints every name passed in as arguments, prepended
-        with their place in line (starting at 1).
-      `);
+      throw new NiceError(helper.world.getTranslatedString('python.python_basics_iterate_list.fiveNames'));
     }
 
     // If we make it this far, we've passed validation
-    helper.success(`
-      Excellent! You have passed the <em>Trial of Iteration</em>.
-    `);
+    helper.success(helper.world.getTranslatedString('python.python_basics_iterate_list.success'));
   } catch (e) {
     console.log(e);
     if (e.name === "NiceError") {
       helper.fail(e.message);
     } else {
-      helper.fail(`
-        Sorry! We couldn't successfully run your Python script.
-      `);
+      helper.fail(helper.world.getTranslatedString('python.validators.sorry'));
     }
   }
 };
