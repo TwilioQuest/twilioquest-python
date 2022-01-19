@@ -187,7 +187,7 @@ module.exports = {
   "python.python_basics_functions.didntSee": `Não foi possível ver a string de texto solicitada por sua função 
   <span class='highlight'>hail_friend</span>. É necessário imprimir
   a string \"Hail, friend!\"`,
-  "python.python_basics_functions.success": `Muito bem! Você não só colocou a \"diversão\" em \"function\", como também passou
+  "python.python_basics_functions.success": `Muito bem! Você não só colocou a "fun" em "function", como também passou
   no <em>Teste de reutilização</em>.`,
   "python.python_basics_functions_return.success": "Não chame isso de regresso! Você acabou de passar no <em>Teste de retorno</em>.",
   "python.python_basics_hello.path": "Forneça um caminho para seu script Python, por exemplo, C:/code/salutation.py",
