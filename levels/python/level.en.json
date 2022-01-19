@@ -11,5 +11,25 @@
   },
   "is_mission": false,
   "backgroundMusic": "unsettlingarea_59895b",
-  "flavorTextOverrides": {}
+  "flavorTextOverrides": {},
+  "objectives": [
+    "python_basics_challenge",
+    "python_basics_booleans",
+    "python_basics_conditional",
+    "python_basics_dictionaries",
+    "python_basics_final",
+    "python_basics_fizzbuzz",
+    "python_basics_functions",
+    "python_basics_function_args",
+    "python_basics_functions_return",
+    "python_basics_hello",
+    "python_basics_install",
+    "python_basics_lists",
+    "python_basics_iterate_list",
+    "python_basics_numbers_math",
+    "python_basics_repl",
+    "python_basics_script_args",
+    "python_basics_strings",
+    "python_basics_variables"
+  ]
 }
