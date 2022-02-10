@@ -1,0 +1,15 @@
+{
+  "title": "Pythonイニシエーション: スクリプト引数",
+  "description": "<strong>コマンドライン引数</strong>を使用し、Pythonコードで使用する初期データを指定する方法を学習します。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "左側のチュートリアルの説明に従い、コマンドライン引数を使用するプログラムを作成し、[<span class='highlight'>HACK</span>]をクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

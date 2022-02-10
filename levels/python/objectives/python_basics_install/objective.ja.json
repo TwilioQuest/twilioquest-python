@@ -1,0 +1,16 @@
+{
+  "title": "Pythonイニシエーション: Python 3のインストール",
+  "description": "コンピューターに<span class=\"highlight\">Pythonインタープリター</span>をインストールし、Pythonコードを記述した後に実行できるようにします。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "pythonPath",
+      "type": "text",
+      "placeholder": "/usr/local/bin/python3",
+      "label": "チュートリアルの説明に従い、Pythonインタープリターにパスを貼り付けます。"
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}
