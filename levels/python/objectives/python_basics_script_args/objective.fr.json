@@ -1,0 +1,15 @@
+{
+  "title": "Initiation à Python: Arguments de script",
+  "description": "Apprenez à utiliser des <strong>arguments de ligne de commande</strong> pour donner à votre code Python quelques données initiales à utiliser.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Créez un programme qui utilise des arguments de ligne de commande, comme décrit dans le tutoriel à gauche, puis cliquez sur <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Initiation à Python: Message d'accueil Pythonique",
+  "description": "Rédigez un programme Python qui <span class=\"highlight\">envoie un message d'accueil classique Pythonique</span> à votre fenêtre de terminal.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "programPath",
+      "type": "text",
+      "placeholder": "/Users/jane/quest/salutation.py",
+      "label": "Collez le chemin d'accès complet à votre programme Python."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}
