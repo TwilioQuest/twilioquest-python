@@ -1,0 +1,19 @@
+{
+  "title": "Pythonイニシエーション: Pythonクラスの作成",
+  "description": "もう1つの課題として、はじめての<span class=\"highlight\">Python class</span>を作成してください。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "チュートリアルの説明どおりにクラスを作成し、[<em>HACK</em>]をクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 400,
+    "items": [
+      "python_scimitar"
+    ]
+  }
+}

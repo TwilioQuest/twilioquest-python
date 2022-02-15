@@ -1,0 +1,35 @@
+{
+  "title": "Pythonic Templeの謎",
+  "description": "伝説の探検家Toledo Van Possumの足取りを追い、Pythonic Templeの謎である、Pythonの古代都市に現存する最古の構造物を発見してください。Pythonプログラミング言語やその他の関連ツールを使用してクエストを完了する方法について学習します。",
+  "questTitle": "Pythonic Templeの謎",
+  "questDescription": "古代Pythonの秘密を解明します!",
+  "priority": 2,
+  "navMap": {
+    "x": 55,
+    "y": 65,
+    "sprite": "nav_map/pythonic_temple.png"
+  },
+  "is_mission": false,
+  "backgroundMusic": "unsettlingarea_59895b",
+  "flavorTextOverrides": {},
+  "objectives": [
+    "python_basics_challenge",
+    "python_basics_booleans",
+    "python_basics_conditional",
+    "python_basics_dictionaries",
+    "python_basics_final",
+    "python_basics_fizzbuzz",
+    "python_basics_functions",
+    "python_basics_function_args",
+    "python_basics_functions_return",
+    "python_basics_hello",
+    "python_basics_install",
+    "python_basics_lists",
+    "python_basics_iterate_list",
+    "python_basics_numbers_math",
+    "python_basics_repl",
+    "python_basics_script_args",
+    "python_basics_strings",
+    "python_basics_variables"
+  ]
+}

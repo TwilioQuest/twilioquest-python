@@ -262,5 +262,7 @@ module.exports = {
   "python.events.youNowHaveAll": "<em>これですべての手がかりを回収しました</em>",
   "python.events.ghostlyFigure": `幽霊の姿が消えると、肩の荷が下りたよう
   に感じます。<br/><br/>賢者の助けを借りて、{message}
-  Pythonの知識の杖を取り戻す必要があります。`
+  Pythonの知識の杖を取り戻す必要があります。`,
+  "python.events.notification": "<span class='highlight'>Pythonic Temple</span>でできることはすべて完了できた!",
+  "python.events.log": "Pythonic Templeでできることはすべて完了できた!"
 }

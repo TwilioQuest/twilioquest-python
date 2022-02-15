@@ -263,4 +263,6 @@ module.exports = {
   'python.events.ghostlyFigure' : `The ghostly figure dissipates, and you feel as if a small weight has been
   lifted off your shoulders.<br/><br/> With the sage's help, {message}
   you need to recover the Staff of Pythonic Knowledge.`,
+  "python.events.notification": "I\'ve completed everything in the <span class='highlight'>Pythonic Temple</span> for now!",
+  "python.events.log": "I've completed everything in the Pythonic Temple for now!"
 };

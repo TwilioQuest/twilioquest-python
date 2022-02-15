@@ -1,0 +1,15 @@
+{
+  "title": "Initiation à Python: Listes",
+  "description": "Les listes sont utiles dans la vie réelle et dans notre code Python. Apprenez à <span class=\"highlight\">créer et à utiliser des listes</span> dans votre code.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Créez un programme comme décrit dans le tutoriel sur la gauche, puis cliquez sur <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

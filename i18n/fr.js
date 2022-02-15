@@ -262,5 +262,7 @@ module.exports = {
   "python.events.youNowHaveAll": "<em>vous avez maintenant tous les indices</em>",
   "python.events.ghostlyFigure": `Le fantôme disparaît et vous avez l'impression qu'un petit poids vous a
   été enlevé des épaules.<br/><br/> Avec l'aide du sage, {message}
-  vous devez récupérer le Bâton des Connaissances Pythoniques.`
+  vous devez récupérer le Bâton des Connaissances Pythoniques.`,
+  "python.events.notification": "J'ai tout terminé dans le <span class='highlight'>Temple Pythonique</span>!",
+  "python.events.log": "J'ai tout terminé dans le Temple Pythonique!"
 }

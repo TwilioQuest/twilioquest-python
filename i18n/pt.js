@@ -262,5 +262,7 @@ module.exports = {
   "python.events.youNowHaveAll": "<em>agora você tem todas as pistas</em>",
   "python.events.ghostlyFigure": `A figura fantasmagórica se dissipa e você sente como se um pequeno peso
   tivesse saído dos ombros.<br/><br/> Com a ajuda do sábio, {message}
-  você precisa recuperar o Cajado do conhecimento pitônico.`
+  você precisa recuperar o Cajado do conhecimento pitônico.`,
+  "python.events.notification": "Já concluí tudo no <span class='highlight'>Templo de Python</span> por enquanto!",
+  "python.events.log": "Já concluí tudo no Templo de Python por enquanto!"
 }
