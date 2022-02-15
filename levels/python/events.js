@@ -43,9 +43,8 @@ module.exports = function (event, world) {
   }
 
   updateQuestLogWhenComplete({
-    notification:
-      'I\'ve completed everything in the <span class="highlight">Pythonic Temple</span> for now!',
-    log: "I've completed everything in the Pythonic Temple for now!",
+    notification: world.getTranslatedString('python.events.notification'),
+    log: world.getTranslatedString('python.events.log'),
     event,
     world,
     worldStateKey: WORLD_STATE_KEY,
