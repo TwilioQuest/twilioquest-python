@@ -75,6 +75,6 @@ python3 booleans.py 'For the glory of Python!'
 
 Qualquer outra entrada deixaria o valor de `proper_greeting` como `False`.
 
-Depois que o script declarar as variáveis corretamente, clique no botão *HACK* (HACKEAR)!
+Depois que o script declarar as variáveis corretamente, clique no botão *HACK*!
 
 </details>

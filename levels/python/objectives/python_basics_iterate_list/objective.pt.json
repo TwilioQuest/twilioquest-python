@@ -6,7 +6,7 @@
     {
       "name": "prompt",
       "type": "prompt",
-      "label": "Crie um programa conforme descrito no tutorial à esquerda e clique em <span class='highlight'>HACK</span> (HACKEAR)."
+      "label": "Crie um programa conforme descrito no tutorial à esquerda e clique em <span class='highlight'>HACK</span>."
     }
   ],
   "rewards": {

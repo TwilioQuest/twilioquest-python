@@ -7,7 +7,7 @@
       "name": "prompt",
       "type": "prompt",
       "placeholder": "",
-      "label": "Crie uma classe conforme instruído no tutorial e clique em <em>HACK</em> (HACKEAR)."
+      "label": "Crie uma classe conforme instruído no tutorial e clique em <em>HACK</em>."
     }
   ],
   "rewards": {

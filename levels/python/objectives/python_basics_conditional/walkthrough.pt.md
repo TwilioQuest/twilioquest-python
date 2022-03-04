@@ -78,6 +78,6 @@ Exemplo de saída:
 You have chosen the path of excess.
 ```
 
-Depois que o script puder lidar com todas as três condições corretamente, clique no botão *HACK* (HACKEAR)!
+Depois que o script puder lidar com todas as três condições corretamente, clique no botão *HACK*!
 
 </details>

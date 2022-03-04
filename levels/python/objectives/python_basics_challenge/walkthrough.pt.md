@@ -14,4 +14,4 @@ Conforme instruído, você cria um arquivo chamado `citizen.py` na sua pasta de 
 <%= env.TQ_PYTHON_CODE_PATH.value %>
 ```
 
-...e começa a trabalhar, confiando em suas habilidades e instintos. Você sabe que, como antes, quando o código está pronto para o teste, você pode clicar no botão *HACK* (HACKEAR) para ver se ele está correto.
+...e começa a trabalhar, confiando em suas habilidades e instintos. Você sabe que, como antes, quando o código está pronto para o teste, você pode clicar no botão *HACK* para ver se ele está correto.

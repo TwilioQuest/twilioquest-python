@@ -29,4 +29,4 @@ Crie uma [classe Python](https://docs.python.org/3/tutorial/classes.html) para d
 * Um __método de instância__ chamado `full_name` que retorna uma string que combina as variáveis de instância de nome e sobrenome, com um único espaço entre elas
 * Uma __variável de classe__ chamada `greeting` que é uma string definida como `For the glory of Python!`
 
-Depois de criar uma classe que atenda a esses critérios no arquivo Python `citizen.py`, clique no botão *HACK* (HACKEAR).
+Depois de criar uma classe que atenda a esses critérios no arquivo Python `citizen.py`, clique no botão *HACK*.

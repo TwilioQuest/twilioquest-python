@@ -30,4 +30,4 @@ Crie um programa que declare diversas variáveis [booleanas](https://docs.python
 
 A terceira variável `proper_greeting` deve ser definida como `True` se o primeiro argumento para seu script for a string exata: `For the glory of Python!`
 
-Depois de criar um código que se comporta dessa forma, clique no botão *HACK* (HACKEAR) para concluir o teste.
+Depois de criar um código que se comporta dessa forma, clique no botão *HACK* para concluir o teste.
