@@ -1,0 +1,15 @@
+{
+  "title": "Pythonイニシエーション: Functions",
+  "description": "<span class=\"highlight\">関数</span>を使用し、再利用可能なPythonコードを作成します。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "左側のチュートリアルの説明どおりにプログラムを作成し、[<span class='highlight'>HACK</span>]をクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

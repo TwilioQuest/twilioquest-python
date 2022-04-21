@@ -1,0 +1,15 @@
+{
+  "title": "Pythonイニシエーション: リストの反復処理",
+  "description": "<span class=\"highlight\">オブジェクトのリストを処理する</span>コードを記述する方法を学習します。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "左側のチュートリアルの説明どおりにプログラムを作成し、[<span class='highlight'>HACK</span>]をクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

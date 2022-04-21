@@ -1,0 +1,16 @@
+{
+  "title": "Pythonイニシエーション: Python式挨拶文",
+  "description": "ターミナルウィンドウに<span class=\"highlight\">伝統的なPython式挨拶文を出力する</span>Pythonプログラムを記述します。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "programPath",
+      "type": "text",
+      "placeholder": "/Users/jane/quest/salutation.py",
+      "label": "Pythonプログラムにフルパスを貼り付けます。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

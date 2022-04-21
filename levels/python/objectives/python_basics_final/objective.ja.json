@@ -1,0 +1,19 @@
+{
+  "title": "Pythonイニシエーション: Pythonの知識の杖",
+  "description": "イニシエーション儀式室の謎を解明し、伝説的な<span class=\"highlight\">Pythonの知識</span>の杖を得てください。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "puzzleAnswer",
+      "type": "text",
+      "placeholder": "???",
+      "label": "左側に記載されているパズルの答えを入力します。"
+    }
+  ],
+  "rewards": {
+    "xp": 1000,
+    "items": [
+      "python_staff"
+    ]
+  }
+}

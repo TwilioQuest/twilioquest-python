@@ -1,0 +1,15 @@
+{
+  "title": "Pythonイニシエーション: 関数の引数",
+  "description": "<span class=\"highlight\">引数を受け入れる</span>関数を作成すると関数内部の動作を変更できます。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "左側のチュートリアルの説明どおりにプログラムを作成し、[<span class='highlight'>HACK</span>]をクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

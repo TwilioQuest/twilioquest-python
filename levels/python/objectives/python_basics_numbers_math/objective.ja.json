@@ -1,0 +1,15 @@
+{
+  "title": "Pythonイニシエーション: 数値と数学",
+  "description": "<strong>数値を操作</strong>する方法と、Pythonで基本的な計算を実行する方法について学習します。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "左側のチュートリアルの説明どおりにプログラムを作成し、[<em>HACK</em>]をクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

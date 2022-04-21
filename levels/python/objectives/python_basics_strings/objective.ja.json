@@ -1,0 +1,15 @@
+{
+  "title": "Pythonイニシエーション: 文字列",
+  "description": "Pythonコードで<span class=\"highlight\">テキストの文字列に手を加える</span>方法について学習します。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "左側のチュートリアルの説明どおりにプログラムを作成し、[<span class='highlight'>HACK</span>]をクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

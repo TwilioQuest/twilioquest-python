@@ -1,0 +1,22 @@
+{
+  "title": "Pythonイニシエーション: REPLを使用して",
+  "description": "Pythonコードを試行するには、Python <span class=\"highlight\">REPL</span>ユーティリティを使用します。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "cityName",
+      "type": "text",
+      "placeholder": "Spooterville",
+      "label": "REPLに「<span  class='highlight'>copyright()</span>」と入力したときに、名前で言及される唯一の都市は何ですか?"
+    },
+    {
+      "name": "resultNumber",
+      "type": "text",
+      "placeholder": "???",
+      "label": "REPLに「<span  class='highlight'>24 / 3</span>」と入力すると、何が返されますか?"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

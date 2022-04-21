@@ -1,0 +1,15 @@
+{
+  "title": "Pythonイニシエーション: 変数の宣言",
+  "description": "<span class=\"highlight\">変数</span>を作成し、コードで処理中のデータを表示する方法を学習しましょう。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "左側のチュートリアルの説明どおりにプログラムを作成し、[<span class='highlight'>HACK</span>]をクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

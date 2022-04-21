@@ -1,0 +1,15 @@
+{
+  "title": "Initiation à Python: Logique conditionnelle",
+  "description": "Apprenez à <strong>ramifier votre code</strong> et à exécuter une logique différente basée sur des comparaisons booléennes.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Créez un programme comme décrit dans le tutoriel sur la gauche, puis cliquez sur <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Initiation à Python: Le Bâton du Savoir Pythonique",
+  "description": "Démêlez les mystères de la Salle du Rituel d'Initiation et emparez-vous du légendaire <span class=\"highlight\">Bâton du Savoir Pythonique</span>!",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "puzzleAnswer",
+      "type": "text",
+      "placeholder": "???",
+      "label": "Soumettez votre réponse pour l'énigme décrite à gauche."
+    }
+  ],
+  "rewards": {
+    "xp": 1000,
+    "items": [
+      "python_staff"
+    ]
+  }
+}
