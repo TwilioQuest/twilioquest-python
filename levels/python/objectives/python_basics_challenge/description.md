@@ -27,7 +27,7 @@
 Create a [Python class](https://docs.python.org/3/tutorial/classes.html) to describe a citizen of the City of Python. The class should be named `Citizen` and have the following data and functionality.
 
 * A __docstring__ that describes the class
-* An __init method__ that takes `first_name` and `last_name` arguments (strings) and assigns them as __instance variables__
+* An __init method__ that takes `first_name` and `last_name` arguments (strings) and assigns them as __instance variables__ called `first_name` and `last_name` respectively
 * An __instance method__ called `full_name` that returns a string that combines the first and last name instance variables, with a single space between them
 * A __class variable__ called `greeting` which is a string set to `For the glory of Python!`
 
